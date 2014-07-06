@@ -1,0 +1,93 @@
+===============================================================================
+  EditSelected BETA1
+  UnrealEd plugin, opens special properties window for selected actor.
+
+  Copyright 2005 Roman Switch` Dzieciol, neai o2.pl
+  http://wiki.beyondunreal.com/wiki/Switch
+===============================================================================
+
+This plugin was written to address 3 problems with F4 actor properties window.
+
+1) Certain kind of properties are not displayed because they aren't supposed to
+   be edited. Advanced users may want to inspect some of those variables but
+   that's not possible with F4 window.
+
+2) Changing selection affects what is displayed in F4 window, sometimes that's
+   not desirable.
+
+3) You can have only one F4 window open. This makes side-by-side comparison of
+   actors kind of tricky.
+
+There are special property windows that arent affected by those issues. They
+can be opened using the "editactor name=actor123" command in UnrealEd
+commandline. Such windows will display hidden properties, will not change when
+selection is changed and you can have as many of them as you want.
+They aren't hassle-free though: you have to lookup exact object name and enter
+the command manually.
+
+The EditSelected plugin lets you display special properties window for selected
+actor with single click.
+
+
+===============================================================================
+  Install
+===============================================================================
+
+Requirements:
+-------------------------------------------------------------------------------
+- Unreal Engine 2, tested on UT2004 and UE2 Runtime
+
+
+UT2004 installer:
+-------------------------------------------------------------------------------
+- Run the EditSelected.ut4mod file.
+- If doesn't work, see below.
+
+
+Universal installer:
+-------------------------------------------------------------------------------
+- Extract the EditSelected folder to your main game folder (ie: \UT2004\).
+- Run Game\EditSelected\Install.bat.
+
+
+Running UnrealEd with custom ini file
+-------------------------------------------------------------------------------
+- If you do use some custom ini's, you'll have to update them manually.
+- Add EditSelected to EditPackages in [Editor.EditorEngine] section.
+- http://wiki.beyondunreal.com/wiki/Add_EditPackage
+
+
+===============================================================================
+  Help
+===============================================================================
+
+How to run the plugin:
+-------------------------------------------------------------------------------
+- To run the plugin click on EditSelected icon.
+- The icon is located in the vertical toolbar, just below brush builders.
+- The icon looks like two actor property windows, side by side.
+
+Options:
+-------------------------------------------------------------------------------
+- Options can be accessed by right-clicking the icon.
+- [MaxWindows] = If multiple actors are selected, open no more than this number
+  of windows. Default and minimum is 1, maximum is 8.
+
+
+===============================================================================
+  Uninstall
+===============================================================================
+
+UT2004 uninstaller:
+-------------------------------------------------------------------------------
+- Available only if installed with EditSelected.ut4mod
+- Run UT2004\System\Setup.exe
+- Select EditSelected and click next.
+
+
+Universal uninstaller:
+-------------------------------------------------------------------------------
+- Run Game\EditSelected\Uninstall.bat.
+
+
+===============================================================================
